@@ -1,0 +1,2 @@
+# NewLibGDXProjectTemplate
+This is an empty LibGDX project with integrated kotlin in Core module and optimized gradle configuration to decrease build and open IDE time. It includes all of the includes, which may be selected from gdx-setup.jar at the moment of latest gdx version is 1.5.2. It have disadvantage: when updating, for example gdx, you need to change gdx_version in buildscript/ext section in core submodule and in each PLATFORM.
