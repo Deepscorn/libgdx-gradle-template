@@ -2,7 +2,7 @@ apply plugin: 'java'
 
 buildscript {
     ext {
-        gdxVersion = '1.5.2'
+        gdxVersion = '1.5.6'
     }
 }
 
