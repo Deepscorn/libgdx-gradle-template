@@ -30,8 +30,6 @@ dependencies {
     compile "org.robovm:robovm-cocoatouch:${roboVMVersion}"
     compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
     natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
-    natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
-    natives "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-ios"
     natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-ios"
 }
 
