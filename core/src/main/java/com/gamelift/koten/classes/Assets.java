@@ -85,7 +85,7 @@ public class Assets {
 	}
 
 	private static void loadAtlas() {
-		items = new TextureAtlas(Gdx.files.internal("data/items.pack"),
+		items = new TextureAtlas(Gdx.files.internal("data/items.atlas"),
 				Gdx.files.internal("data"));
 	}
 

@@ -109,13 +109,13 @@ public class WorldRenderer {
 							duck.position.y - Duck.DUCK_HEIGHT / 2, sideX
 									* Duck.DUCK_WIDTH, Duck.DUCK_HEIGHT);
 
-			{// Debug Duck
-				shapeRenderer.setProjectionMatrix(cam.combined);
-				shapeRenderer.begin(ShapeType.Line);
-				shapeRenderer.setColor(Color.RED);
-				shapeRenderer.rect(duck.bounds.x, duck.bounds.y,
-						duck.bounds.width, duck.bounds.height);
-				shapeRenderer.end();
+			{// todo: Debug Duck
+//				shapeRenderer.setProjectionMatrix(cam.combined);
+//				shapeRenderer.begin(ShapeType.Line);
+//				shapeRenderer.setColor(Color.RED);
+//				shapeRenderer.rect(duck.bounds.x, duck.bounds.y,
+//						duck.bounds.width, duck.bounds.height);
+//				shapeRenderer.end();
 			}
 		}
 	}
