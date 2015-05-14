@@ -2,6 +2,14 @@
 This is an empty LibGDX project with integrated kotlin in Core module and optimized gradle configuration to decrease build and open IDE time. It includes all of the includes, which may be selected from gdx-setup.jar at the moment of latest gdx version is 1.6.0. It have disadvantage: when updating, for example gdx, you need to change gdx_version in buildscript/ext section in core submodule and in each PLATFORM.
 This is an empty LibGDX project with integrated kotlin in Core module and optimized gradle configuration to decrease build, open IDE time and remove lags when actually typing code in IDE. It includes most of the used includes, which may be selected from gdx-setup.jar at the moment of latest gdx version is 1.6.0. It have disadvantage: when updating, for example gdx, you need to change gdx_version in buildscript/ext section in core submodule and in each PLATFORM. I don't know any workaround for that and think about that as a fair price for really improved performance. Read more  http://gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
 
+Build app for android
+
+--------
+First, uncomment unpackNatives() task found in android/build.gradle. It's used to unpack jars and put .so in correct directories, so that they will be included in apk. Nothing more is needed to do, just click "run" in IDE or execute in terminal:
+./gradlew :android:installRelease
+or
+./gradlew :android:installDebug
+
 
 Build app for iOS
 
