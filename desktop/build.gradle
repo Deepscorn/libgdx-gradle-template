@@ -1,11 +1,5 @@
 apply plugin: 'java'
 
-buildscript {
-    ext {
-        gdxVersion = '1.6.0'
-    }
-}
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(":core")

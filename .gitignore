@@ -18,15 +18,13 @@ www-test/
 .gwt-tmp/
 
 ## Android Studio and Intellij and Android in general
-android/libs/armeabi/
-android/libs/armeabi-v7a/
-android/libs/x86/
-android/gen/
+android/src/main/jniLibs/armeabi/
+android/src/main/jniLibs/armeabi-v7a/
+android/src/main/jniLibs/x86/
 .idea/
 *.ipr
 *.iws
 *.iml
-out/
 com_crashlytics_export_strings.xml
 
 ## Eclipse
@@ -63,3 +61,9 @@ build/
 ## OS Specific
 .DS_Store
 thumbs.db
+
+ignored/
+
+# built native files
+*.o
+#*.so

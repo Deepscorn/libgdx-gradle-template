@@ -5,14 +5,23 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.2'
-
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'de.aaschmid.gradle.plugins:gradle-cpd-plugin:0.4'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
 allprojects {
+    buildscript {
+        ext {
+            gdxVersion = '1.9.3'
+            box2DLightsVersion = '1.4'
+            ashleyVersion = '1.7.2'
+            aiVersion = '1.8.0'
+            roboVMVersion = '1.14.0'
+        }
+    }
     repositories {
         jcenter()
     }

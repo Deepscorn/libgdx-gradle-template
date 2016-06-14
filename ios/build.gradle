@@ -8,11 +8,6 @@ ext {
 }
 
 buildscript {
-    ext {
-        gdxVersion = '1.6.0'
-        roboVMVersion = '1.2.0'
-    }
-
     repositories {
         mavenCentral()
     }
