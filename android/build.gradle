@@ -11,6 +11,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled = true
     }
     buildTypes {
         release {
@@ -30,17 +31,6 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
-//    These lines is just to compile core project code using java 8 too. Otherwise we have an error:
-//    Error:Error converting bytecode to dex:
-//    Cause: Dex cannot parse version 52 byte code.
-//    This is caused by library dependencies that have been compiled using Java 8 or above.
-//    If you are using the 'java' gradle plugin in a library submodule add
-//    targetCompatibility = '1.7'
-//    sourceCompatibility = '1.7'
-//    to that submodule's build.gradle file.
-    sourceSets {
-        main.java.srcDirs += '../core/src/main/java'
-    }
 }
 
 retrolambda {
@@ -53,6 +43,7 @@ configurations { natives }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(":core")
     compile 'com.android.support:multidex:1.0.1'
 
     compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
