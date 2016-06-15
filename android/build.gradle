@@ -30,7 +30,7 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
-//    I don't use compile project(':core') and just add sources here to get java 8 support without error:
+//    These lines is just to compile core project code using java 8 too. Otherwise we have an error:
 //    Error:Error converting bytecode to dex:
 //    Cause: Dex cannot parse version 52 byte code.
 //    This is caused by library dependencies that have been compiled using Java 8 or above.
