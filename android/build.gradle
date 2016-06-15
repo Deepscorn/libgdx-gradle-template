@@ -80,11 +80,11 @@ dependencies {
 // call every time on version change. Just uncomment - task will be executed automatically next time gradle is running
 task unpackNatives() {
     def outputRoot = "src/main/jniLibs/";
-    file("libs/armeabi/").mkdirs();
-    file("libs/armeabi-v7a/").mkdirs();
-    file("libs/arm64-v8a/").mkdirs();
-    file("libs/x86_64/").mkdirs();
-    file("libs/x86/").mkdirs();
+    file(outputRoot + "armeabi/").deleteDir();
+    file(outputRoot + "armeabi-v7a/").deleteDir();
+    file(outputRoot + "arm64-v8a/").deleteDir();
+    file(outputRoot + "x86_64/").deleteDir();
+    file(outputRoot + "x86/").deleteDir();
 
     configurations.natives.files.each { jar ->
         def outputDir = null
