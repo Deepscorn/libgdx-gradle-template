@@ -12,6 +12,9 @@ That project is not for HTML and Eclipse. It is primaraly used to write java 8 c
 2. JetBrains IDEA
 3. gradle
 
+# Known problems
+You should make an environment variable JAVA_HOME to point to your java 8 jdk for retrolumbda to work. Also, you may need to disable "instant run" in IDE (see https://developer.android.com/preview/j8-jack.html)
+
 # Build app for android
 
 --------
