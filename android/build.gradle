@@ -48,16 +48,19 @@ dependencies {
 // extract .so from downloaded by gradle latest natives and copies them to src/main/jniLibs/
 // call every time on version change. Just uncomment - task will be executed automatically next time gradle is running
 //task unpackNatives() {
-//
-//    file("src/main/jniLibs/armeabi/").mkdirs();
-//    file("src/main/jniLibs/armeabi-v7a/").mkdirs();
-//    file("src/main/jniLibs/x86/").mkdirs();
+//    file("libs/armeabi/").mkdirs();
+//    file("libs/armeabi-v7a/").mkdirs();
+//    file("libs/arm64-v8a/").mkdirs();
+//    file("libs/x86_64/").mkdirs();
+//    file("libs/x86/").mkdirs();
 //
 //    configurations.natives.files.each { jar ->
 //        def outputDir = null
-//        if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("src/main/jniLibs/armeabi-v7a")
-//        if(jar.name.endsWith("natives-armeabi.jar")) outputDir = file("src/main/jniLibs/armeabi")
-//        if(jar.name.endsWith("natives-x86.jar")) outputDir = file("src/main/jniLibs/x86")
+//        if(jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
+//        if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+//        if(jar.name.endsWith("natives-armeabi.jar")) outputDir = file("libs/armeabi")
+//        if(jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
+//        if(jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
 //        if(outputDir != null) {
 //            copy {
 //                from zipTree(jar)
@@ -66,7 +69,6 @@ dependencies {
 //            }
 //        }
 //    }
-//
 //}
 
 //apply from: "${rootDir}/ignored/BuildScripts/gradle/staticAnalysis.gradle"

@@ -8,10 +8,9 @@ import com.gamelift.koten.MainGame;
 
 public class AndroidLauncher extends AndroidApplication {
     @Override
-    protected void onCreate (Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+        final AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
         initialize(new MainGame(), config);
     }
 }
-

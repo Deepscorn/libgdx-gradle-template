@@ -42,3 +42,6 @@ Html project is not included here, because of Kotlin used in core submodule. The
 Issues, not described here
 --------
 Before adding any issues, try disabling the optimizations, I've done in gradle.properties. Simply, you may remove all of them.
+
+## Useful gradle commands
+gradlew clean --no-daemon // Clean project, that one used by official setup script
