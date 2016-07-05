@@ -17,15 +17,6 @@ buildscript {
 }
 
 allprojects {
-    buildscript {
-        ext {
-            gdxVersion = '1.9.3'
-            box2DLightsVersion = '1.4'
-            ashleyVersion = '1.7.2'
-            aiVersion = '1.8.0'
-            roboVMVersion = '1.14.0'
-        }
-    }
     repositories {
         jcenter()
     }

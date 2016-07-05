@@ -12,7 +12,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.robovm:robovm-gradle-plugin:${roboVMVersion}"
+        classpath "org.robovm:robovm-gradle-plugin:1.14.0"
     }
 }
 
@@ -21,13 +21,13 @@ configurations { natives }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(":core")
-    compile "org.robovm:robovm-rt:${roboVMVersion}"
-    compile "org.robovm:robovm-cocoatouch:${roboVMVersion}"
-    compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
-    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
-    natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
-    natives "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-ios"
-    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-ios"
+    compile "org.robovm:robovm-rt:1.14.0"
+    compile "org.robovm:robovm-cocoatouch:1.14.0"
+    compile "com.badlogicgames.gdx:gdx-backend-robovm:1.9.3"
+    natives "com.badlogicgames.gdx:gdx-platform:1.9.3:natives-ios"
+    natives "com.badlogicgames.gdx:gdx-box2d-platform:1.9.3:natives-ios"
+    natives "com.badlogicgames.gdx:gdx-bullet-platform:1.9.3:natives-ios"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:1.9.3:natives-ios"
 }
 
 // Extracts native libs (*.a) from the native-ios.jar and places them

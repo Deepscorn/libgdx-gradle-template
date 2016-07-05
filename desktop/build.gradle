@@ -3,10 +3,10 @@ apply plugin: 'java'
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(":core")
-    compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
-    compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-    compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
-    compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
-    compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
-    compile "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-desktop"
+    compile "com.badlogicgames.gdx:gdx-backend-lwjgl:1.9.3"
+    compile "com.badlogicgames.gdx:gdx-platform:1.9.3:natives-desktop"
+    compile "com.badlogicgames.gdx:gdx-box2d-platform:1.9.3:natives-desktop"
+    compile "com.badlogicgames.gdx:gdx-tools:1.9.3"
+    compile "com.badlogicgames.gdx:gdx-freetype-platform:1.9.3:natives-desktop"
+    compile "com.badlogicgames.gdx:gdx-bullet-platform:1.9.3:natives-desktop"
 }
