@@ -1,5 +1,12 @@
 That project is an enhanced gradle configuration for libgdx
 
+# Prerequisites
+1. JAVA_HOME set to Jdk 8 path
+
+# IDE's support
+1. Import in Android Studio
+2. Import in IDEA as gradle project (check auto-import, uncheck create separate module per source set, use default gradle wrapper) 
+
 # Features
 1. Java 8 support (tested desktop & android) with lambdas
 2. Decoupled projects - when working on android project, you wount see gradle doing something with RoboVM which is used only for iOS. So better performance and stability
