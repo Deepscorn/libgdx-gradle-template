@@ -21,8 +21,8 @@ www-test/
 android/src/main/jniLibs/armeabi/
 android/src/main/jniLibs/armeabi-v7a/
 android/src/main/jniLibs/x86/
-android/src/main/jniLibs/x86/arm64-v8a/
-android/src/main/jniLibs/x86/x86_64/
+android/src/main/jniLibs/arm64-v8a/
+android/src/main/jniLibs/x86_64/
 .idea/
 *.ipr
 *.iws
