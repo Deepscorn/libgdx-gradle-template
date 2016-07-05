@@ -31,7 +31,7 @@ uncheck create separate module per source set,
 use default gradle wrapper
 
 # AIDE
-AIDE has limitations on building gradle projects at the time of writing. So gradle configuration was simplified and some things we need to do by hand:
+AIDE has limitations on building gradle projects at the time of writing. So gradle configuration was simplified - see aide branch. Some things we need to do by hand:
 
 1. Copy android/src/main/jniLibs from desktop to mobile device
 
