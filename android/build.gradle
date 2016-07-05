@@ -41,6 +41,7 @@ retrolambda {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(":core")
     compile 'com.android.support:multidex:1.0.1'
 
     compile "com.badlogicgames.gdx:gdx-backend-android:1.9.3"
