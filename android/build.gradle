@@ -6,7 +6,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.gamelift.koten"
+        applicationId "com.gamelift.koten.android"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
