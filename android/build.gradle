@@ -39,57 +39,16 @@ retrolambda {
     incremental false
 }
 
-configurations { natives }
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(":core")
     compile 'com.android.support:multidex:1.0.1'
 
     compile "com.badlogicgames.gdx:gdx-backend-android:1.9.3"
-    natives "com.badlogicgames.gdx:gdx-platform:1.9.3:natives-armeabi"
-    natives "com.badlogicgames.gdx:gdx-platform:1.9.3:natives-armeabi-v7a"
-    natives "com.badlogicgames.gdx:gdx-platform:1.9.3:natives-x86"
     compile "com.badlogicgames.gdx:gdx-box2d:1.9.3"
-    natives "com.badlogicgames.gdx:gdx-box2d-platform:1.9.3:natives-armeabi"
-    natives "com.badlogicgames.gdx:gdx-box2d-platform:1.9.3:natives-armeabi-v7a"
-    natives "com.badlogicgames.gdx:gdx-box2d-platform:1.9.3:natives-x86"
     compile "com.badlogicgames.box2dlights:box2dlights:1.4"
     compile "com.badlogicgames.ashley:ashley:1.7.2"
     compile "com.badlogicgames.gdx:gdx-ai:1.8.0"
     compile "com.badlogicgames.gdx:gdx-freetype:1.9.3"
-    natives "com.badlogicgames.gdx:gdx-freetype-platform:1.9.3:natives-armeabi"
-    natives "com.badlogicgames.gdx:gdx-freetype-platform:1.9.3:natives-armeabi-v7a"
-    natives "com.badlogicgames.gdx:gdx-freetype-platform:1.9.3:natives-x86"
     compile "com.badlogicgames.gdx:gdx-bullet:1.9.3"
-    natives "com.badlogicgames.gdx:gdx-bullet-platform:1.9.3:natives-armeabi"
-    natives "com.badlogicgames.gdx:gdx-bullet-platform:1.9.3:natives-armeabi-v7a"
-    natives "com.badlogicgames.gdx:gdx-bullet-platform:1.9.3:natives-x86"
-}
-
-// extract .so from downloaded by gradle latest natives and copies them to src/main/jniLibs/
-// call every time on version change. Just uncomment - task will be executed automatically next time gradle is running
-task unpackNatives() {
-    def outputRoot = "src/main/jniLibs/";
-    file(outputRoot + "armeabi/").deleteDir();
-    file(outputRoot + "armeabi-v7a/").deleteDir();
-    file(outputRoot + "arm64-v8a/").deleteDir();
-    file(outputRoot + "x86_64/").deleteDir();
-    file(outputRoot + "x86/").deleteDir();
-
-    configurations.natives.files.each { jar ->
-        def outputDir = null
-        if(jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file(outputRoot + "arm64-v8a")
-        if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file(outputRoot + "armeabi-v7a")
-        if(jar.name.endsWith("natives-armeabi.jar")) outputDir = file(outputRoot + "armeabi")
-        if(jar.name.endsWith("natives-x86_64.jar")) outputDir = file(outputRoot + "x86_64")
-        if(jar.name.endsWith("natives-x86.jar")) outputDir = file(outputRoot + "x86")
-        if(outputDir != null) {
-            copy {
-                from zipTree(jar)
-                into outputDir
-                include "*.so"
-            }
-        }
-    }
 }
