@@ -107,3 +107,9 @@ https://github.com/libgdx/libgdx/issues/1485. Will appreciate solving that myste
 
 ## Useful gradle commands
 gradlew clean --no-daemon // Clean project, that one used by official setup script
+
+## Useful reading
+http://deepscorn.blogspot.ru/2016/07/building-and-running-android-studio.html
+http://deepscorn.blogspot.ru/2015/05/speed-up-libgdx-gradle-build-in.html
+http://deepscorn.blogspot.ru/2015/05/libgdx-kotlin-setup.html
+
