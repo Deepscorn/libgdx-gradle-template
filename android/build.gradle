@@ -4,13 +4,13 @@ apply plugin: 'me.tatarka.retrolambda'
 // apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.gamelift.koten"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         multiDexEnabled = true
