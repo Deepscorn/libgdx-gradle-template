@@ -38,9 +38,7 @@ AIDE has limitations on building gradle projects at the time of writing. So grad
 2. Build core project on desktop, then copy built core.jar to android/libs
 
 # AIDE limitations
-1. Not working:
-
-build.gradle file:
+1. Variables in build.gradle file not working. E.g.:
 
 buildscript { 
   ext { 
@@ -52,13 +50,11 @@ dependencies {
   compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
 }
 
-Working:
+So you just can't use them and need to copy-paste when updating:
 
 compile "com.badlogicgames.gdx:gdx-backend-android:1.9.3"
 
-2. Not working:
-
-gradle.properties file:
+2. Variables in gradle.properties file not working. E.g:
 
 gdxVersion=1.9.3
 
@@ -67,10 +63,6 @@ build.gradle:
 dependencies {
   compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
 }
-
-Working:
-
-compile "com.badlogicgames.gdx:gdx-backend-android:1.9.3"
 
 3. Building core gradle project as regular java project in AIDE doesn't work. At the time of writing AIDE opens core as android project (probably it doesn't know that regular java project can use gradle build system) and fails to compile it. The suggestion is to build it on desktop and copy jar. To be able to write core code on mobile device you can write it in android project. Then just move it when you are back on desktop and build new jar. It's ugly, but it's working
 
